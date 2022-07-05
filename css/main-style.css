@@ -1,0 +1,53 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Anek+Latin:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+
+/* Variables */
+
+:root {
+    --black: #000000;
+    --white: #FFFFFF;
+    --default-font: 'Pattaya', sans-serif;
+    --text-font: 'Anek Latin', sans-serif;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+/* Normalize styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: var(--default-font);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+ul, ol, li {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    list-style: none;
+}
+
+p {
+    margin: 0;
+    line-height: 1.5;
+    font-family: var(--default-font);
+}
+
+input, button {
+    font-family: var(--default-font);
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+}
