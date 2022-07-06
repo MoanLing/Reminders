@@ -5,8 +5,15 @@
 /* Variables */
 
 :root {
+    --default-background-main: #E6DCF5;
+    --login-btn: #D0D0D0;
+    --light-green: #A1BC97;
+    --middle-red: #6D0000;
+    --dark-red-txt: #4F1E1E;
     --black: #000000;
     --white: #FFFFFF;
+    --beige: #ECEBD6;
+    --yellow: #F9E74D;
     --default-font: 'Pattaya', sans-serif;
     --text-font: 'Anek Latin', sans-serif;
 }
@@ -17,11 +24,14 @@
 
 /* Normalize styles */
 body {
+    width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
     font-size: 14px;
     font-weight: 400;
     font-family: var(--default-font);
+    background-color: var(--default-background-main);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -51,3 +61,135 @@ input, button {
     font-weight: 400;
     outline: none;
 }
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--light-green);
+}
+
+.header-block {
+    width: 100%;
+    padding: 15px 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-title {
+    display: flex;
+    align-items: center;
+    background-color: var(--beige);
+    padding: 10px 100px;
+    border-radius: 50px 10px 50px 10px;
+}
+
+.header-title h1 {
+    color: var(--dark-red-txt);
+    text-align: center;
+}
+
+.login-btn {
+    background-color: var(--login-btn);
+    border: none;
+    cursor: pointer;
+}
+
+.login-btn {
+    border-radius: 10px 50px 10px 50px;
+    overflow: hidden;
+}
+
+.login-btn-txt {
+    padding: 15px;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-inner {
+    width: 1200px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.items {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item:nth-child(3n) {
+    margin-right: 0;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% / 3 - 50px);
+    height: 300px;
+    background-color: var(--yellow);
+    margin: 0 50px 50px 0;
+    padding: 30px;
+    font-family: var(--text-font);
+}
+
+.title-group {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    border-bottom: 2px solid var(--black);
+}
+
+.title-txt {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.editBtn-time-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.edit-btn-block {
+    overflow: hidden;
+    border-radius: 10px 10px 5px 5px;
+    margin-bottom: 10px;
+}
+
+.edit-btn {
+    width: 60px;
+    height: 25px;
+    border-radius: 10px 10px 5px 5px;
+    padding: 0px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid var(--middle-red);
+}
+
+.edit-btn:hover {
+    background-color: var(--middle-red);
+    border: 2px solid var(--black);
+    color: var(--white);
+}
+
+.edit-btn span {
+    letter-spacing: 7px;
+    text-align: center;
+}
+
