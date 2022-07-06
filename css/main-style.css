@@ -7,10 +7,12 @@
 :root {
     --default-background-main: #E6DCF5;
     --login-btn: #D0D0D0;
-    --light-green: #A1BC97;
+    --dark-green: #A1BC97;
+    --light-green: #AFBE8F;
     --middle-red: #6D0000;
     --dark-red-txt: #4F1E1E;
     --add-new-btn-background: #D4C8C8;
+    --grey: #6D6D6D;
     --black: #000000;
     --white: #FFFFFF;
     --beige: #ECEBD6;
@@ -74,7 +76,7 @@ input, button {
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: var(--light-green);
+    background-color: var(--dark-green);
 }
 
 .header-block {
@@ -99,13 +101,19 @@ input, button {
 }
 
 .login-btn {
+    color: var(--black);
     background-color: var(--login-btn);
     border: none;
     border-radius: 10px 50px 10px 50px;
+    transition: color 0.5s ease-out 0.2s, background-color 0.5s ease-out 0.2s, border 0.5s ease-out 0s, border-radius 1.5s ease-out 0.2s;
     overflow: hidden;
 }
 
 .login-btn:hover {
+    color: var(--login-btn);
+    background-color: var(--grey);
+    border: 1px solid var(--black);
+    border-radius: 50px;
     cursor: pointer;
 }
 
@@ -149,9 +157,13 @@ main {
     border-radius: 50px;
     background-color: var(--add-new-btn-background);
     margin-right: 50px;
+    transition: background-color 0.5s ease-out 0s, border 0.5s ease-out 0s, color 0.5s ease-out 0.2s;
 }
 
-.add-new-btn {
+.add-new-btn:hover {
+    background-color: var(--light-green);
+    border: 1px solid #000;
+    color: var(--white);
     cursor: pointer;
 }
 
@@ -177,13 +189,14 @@ section.items {
     background-color: var(--yellow);
     margin: 0 50px 50px 0;
     padding: 30px;
+    border-radius: 15px;
     font-family: var(--text-font);
 }
 
 .title-group {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
     border-bottom: 2px solid var(--black);
 }
 
@@ -212,6 +225,7 @@ section.items {
     padding: 0px;
     background-color: transparent;
     border: 2px solid var(--middle-red);
+    transition: background-color 0.5s ease-out 0s, border 0.5s ease-out 0s, color 0.2s ease-out 0.2s;
 }
 
 .edit-btn:hover {
