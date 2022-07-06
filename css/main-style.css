@@ -10,10 +10,12 @@
     --light-green: #A1BC97;
     --middle-red: #6D0000;
     --dark-red-txt: #4F1E1E;
+    --add-new-btn-background: #D4C8C8;
     --black: #000000;
     --white: #FFFFFF;
     --beige: #ECEBD6;
     --yellow: #F9E74D;
+    --turquoise: #AECDC8;
     --default-font: 'Pattaya', sans-serif;
     --text-font: 'Anek Latin', sans-serif;
 }
@@ -99,13 +101,14 @@ input, button {
 .login-btn {
     background-color: var(--login-btn);
     border: none;
-    cursor: pointer;
-}
-
-.login-btn {
     border-radius: 10px 50px 10px 50px;
     overflow: hidden;
 }
+
+.login-btn:hover {
+    cursor: pointer;
+}
+
 
 .login-btn-txt {
     padding: 15px;
@@ -124,6 +127,36 @@ main {
     height: 100%;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+}
+
+.elements {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.counts {
+    padding: 5px 15px;
+    border-radius: 30px;
+    background-color: var(--turquoise);
+    color: var(--black);
+}
+
+.add-new-btn {
+    border: 1px solid var(--white);
+    color: var(--black);
+    border-radius: 50px;
+    background-color: var(--add-new-btn-background);
+    margin-right: 50px;
+}
+
+.add-new-btn {
+    cursor: pointer;
+}
+
+section.items {
+    margin-top: 50px;
 }
 
 .items {
@@ -177,7 +210,6 @@ main {
     height: 25px;
     border-radius: 10px 10px 5px 5px;
     padding: 0px;
-    cursor: pointer;
     background-color: transparent;
     border: 2px solid var(--middle-red);
 }
@@ -186,6 +218,7 @@ main {
     background-color: var(--middle-red);
     border: 2px solid var(--black);
     color: var(--white);
+    cursor: pointer;
 }
 
 .edit-btn span {
