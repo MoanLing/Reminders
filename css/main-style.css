@@ -17,6 +17,7 @@
     --white: #FFFFFF;
     --beige: #ECEBD6;
     --yellow: #F9E74D;
+    --scroll-track: #BFBFBF;
     --turquoise: #AECDC8;
     --default-font: 'Pattaya', sans-serif;
     --text-font: 'Anek Latin', sans-serif;
@@ -83,7 +84,7 @@ input, button {
 
 .header-block {
     width: 100%;
-    padding: 15px 200px;
+    padding: 10px 200px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -98,6 +99,7 @@ input, button {
 }
 
 .header-title h1 {
+    font-size: 20px;
     color: var(--dark-red-txt);
     text-align: center;
 }
@@ -105,7 +107,7 @@ input, button {
 .login-btn {
     color: var(--black);
     background-color: var(--login-btn);
-    border: none;
+    border: 1px solid var(--login-btn);
     border-radius: 10px 50px 10px 50px;
     transition: color 0.5s ease-out 0.2s, background-color 0.5s ease-out 0.2s, border 0.5s ease-out 0s, border-radius 1.5s ease-out 0.2s;
     overflow: hidden;
@@ -121,13 +123,14 @@ input, button {
 
 
 .login-btn-txt {
+    font-size: 20px;
     padding: 15px;
 }
 
 main {
     width: 100%;
     height: 100%;
-    margin-top: 100px;
+    margin-top: 30px;
     display: flex;
     justify-content: center;
 }
@@ -199,7 +202,7 @@ section.items {
     display: flex;
     justify-content: space-between;
     padding-bottom: 15px;
-    border-bottom: 2px solid var(--black);
+    border-bottom: 1px solid var(--black);
 }
 
 .title-txt {
@@ -263,7 +266,7 @@ section.items {
     overflow-y: scroll;
     font-size: 14;
     font-family: var(--text-font);
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 .item-content::-webkit-scrollbar {
@@ -271,7 +274,8 @@ section.items {
 }
 
 .item-content::-webkit-scrollbar-track {
-    background-color: transparent;
+    background-color: var(--scroll-track);
+    border-radius: 30px;
 }
 
 .item-content::-webkit-scrollbar-thumb {
