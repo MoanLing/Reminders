@@ -60,14 +60,14 @@ p {
     font-family: var(--default-font);
 }
 
-/* Styles */
-
 input, button {
     font-family: var(--default-font);
     font-size: 16px;
     font-weight: 400;
     outline: none;
 }
+
+/* Main styles */
 
 .wrapper {
     display: flex;
@@ -82,13 +82,16 @@ input, button {
     background-color: var(--dark-green);
 }
 
+
 .header-block {
-    width: 100%;
+    width: 1200px;
     padding: 10px 200px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
+
 
 .header-title {
     display: flex;
@@ -99,7 +102,7 @@ input, button {
 }
 
 .header-title h1 {
-    font-size: 20px;
+    font-size: 24px;
     color: var(--dark-red-txt);
     text-align: center;
 }
@@ -161,7 +164,6 @@ main {
     color: var(--black);
     border-radius: 50px;
     background-color: var(--add-new-btn-background);
-    margin-right: 50px;
     transition: background-color 0.5s ease-out 0s, border 0.5s ease-out 0s, color 0.5s ease-out 0.2s;
 }
 
@@ -176,8 +178,8 @@ section.items {
     margin-top: 50px;
 }
 
+
 .items {
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
 }
@@ -190,9 +192,9 @@ section.items {
     display: flex;
     flex-direction: column;
     width: calc(100% / 3 - 50px);
+    margin: 0 75px 50px 0;
     height: 300px;
     background-color: var(--yellow);
-    margin: 0 50px 50px 0;
     padding: 30px;
     border-radius: 15px;
     font-family: var(--text-font);
@@ -210,6 +212,8 @@ section.items {
     font-weight: 500;
 }
 
+
+
 .editBtn-time-group {
     display: flex;
     flex-direction: column;
@@ -218,16 +222,17 @@ section.items {
 }
 
 .edit-btn-block {
+    width: 60px;
+    height: 25px;
     overflow: hidden;
     border-radius: 10px 10px 5px 5px;
     margin-bottom: 10px;
 }
 
 .edit-btn {
-    width: 60px;
-    height: 25px;
+    width: 100%;
+    height: 100%;
     border-radius: 10px 10px 5px 5px;
-    padding: 0px;
     background-color: transparent;
     border: 2px solid var(--middle-red);
     transition: background-color 0.5s ease-out 0s, border 0.5s ease-out 0s, color 0.2s ease-out 0.2s;
@@ -241,7 +246,6 @@ section.items {
 }
 
 .edit-btn span {
-    letter-spacing: 7px;
     text-align: center;
 }
 
@@ -281,4 +285,148 @@ section.items {
 .item-content::-webkit-scrollbar-thumb {
     background-color: var(--black);
     border-radius: 30px;
+}
+
+/* Media */
+
+@media (max-width: 1280px) {
+    .header-block {
+        width: 800px;
+        padding: 5px 100px;
+    }
+
+    .header-title {
+        padding: 5px 50px;
+    }
+
+    .header-title h1{
+        font-size: 21px;
+    }
+
+    .login-btn-txt {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .item {
+        height: 250px;
+        padding: 20px;
+    }
+
+    .main-inner {
+        width: 800px;
+    }
+
+    section.items {
+        margin-top: 25px;
+    }
+
+    .title-txt {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 799px) {
+    .header-block {
+        width: 800px;
+        padding: 5px 100px;
+    }
+
+    .header-title {
+        padding: 5px 50px;
+    }
+
+    .header-title h1 {
+        font-size: 18px;
+    }
+
+    .login-btn-txt {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .item {
+        height: 200px;
+        padding: 15px;   
+    }
+
+    .clock {
+        font-size: 10px;
+    }
+
+    .item-content {
+        margin-top: 10px;
+        font-size: 12px;
+    }
+
+    .main {
+        margin-top: 20px;
+    }
+
+    .main-inner {
+        width: 600px;
+    }
+
+    .edit-btn-block {
+        width: 45px;
+        height: 25px;
+        text-align: center;
+        margin-bottom: 5px;
+        font-size: 12px;
+    }
+
+    .edit-btn span {
+        padding: 5px;
+    }
+
+    section.items {
+        margin-top: 20px;
+    }
+
+    .title-txt {
+        font-size: 20px;
+    }
+}
+
+
+@media (max-width: 599px) {
+    .header-block {
+        width: 400px;
+        padding: 2.5px 25px;
+    }
+
+    .header-title {
+        padding: 5px 20px;
+    }
+
+    .header-title h1 {
+        font-size: 16px;
+    }
+
+    .login-btn-txt {
+        font-size: 16px;
+        padding: 5px;
+    }
+
+    .main-inner {
+        width: 400px;
+    }
+
+    .item {
+        width: calc(100% / 2 - 25px);
+        margin: 0 50px 50px 0;
+    }
+
+    .item:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    section.items {
+        margin-top: 15px;
+    }
+
+    .title-txt {
+        font-size: 18px;
+    }
+
 }
