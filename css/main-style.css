@@ -111,7 +111,7 @@ input, button {
     color: var(--black);
     background-color: var(--login-btn);
     border: 1px solid var(--login-btn);
-    border-radius: 10px 50px 10px 50px;
+    border-radius: 10px 50px;
     transition: color 0.5s ease-out 0.2s, background-color 0.5s ease-out 0.2s, border 0.5s ease-out 0s, border-radius 1.5s ease-out 0.2s;
     overflow: hidden;
 }
