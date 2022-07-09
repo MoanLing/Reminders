@@ -107,7 +107,7 @@ input, button {
     text-align: center;
 }
 
-.login-btn {
+.header-login {
     color: var(--black);
     background-color: var(--login-btn);
     border: 1px solid var(--login-btn);
@@ -116,7 +116,16 @@ input, button {
     overflow: hidden;
 }
 
-.login-btn:hover {
+.header-login a {
+    text-decoration: none;
+}
+
+.login-btn-txt:visited {
+    color: var(--black);
+    text-decoration: none;
+}
+
+.header-login:hover {
     color: var(--login-btn);
     background-color: var(--grey);
     border: 1px solid var(--black);
@@ -126,6 +135,7 @@ input, button {
 
 
 .login-btn-txt {
+    color: var(--black);
     font-size: 20px;
     padding: 15px;
 }
@@ -182,10 +192,6 @@ section.items {
 .items {
     display: flex;
     flex-wrap: wrap;
-}
-
-.item:nth-child(3n) {
-    margin-right: 0;
 }
 
 .item {
@@ -289,6 +295,12 @@ section.items {
 
 /* Media */
 
+@media (max-width: 1920px) {
+    .item:nth-child(3n) {
+        margin-right: 0;
+    }
+}
+
 @media (max-width: 1280px) {
     .header-block {
         width: 800px;
@@ -314,6 +326,7 @@ section.items {
     }
 
     .main-inner {
+        padding: 0 20px;
         width: 800px;
     }
 
@@ -364,6 +377,7 @@ section.items {
     }
 
     .main-inner {
+        padding: 0 20px;
         width: 600px;
     }
 
@@ -409,6 +423,7 @@ section.items {
     }
 
     .main-inner {
+        padding: 0 20px;
         width: 400px;
     }
 
