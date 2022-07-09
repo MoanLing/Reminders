@@ -9,14 +9,20 @@
     --login-btn: #D0D0D0;
     --dark-green: #A1BC97;
     --light-green: #AFBE8F;
+    --popUp-background: #F1F5B8;
+    --popUp-header-background: #CBD781;
+    --popUp-background-textArea: #E3E3E3;
     --middle-red: #6D0000;
     --dark-red-txt: #4F1E1E;
     --add-new-btn-background: #D4C8C8;
     --grey: #6D6D6D;
+    --dark-grey: #AAA;
     --black: #000000;
     --white: #FFFFFF;
     --beige: #ECEBD6;
     --yellow: #F9E74D;
+    --save-btn-green: #54B244;
+    --cancel-btn-red: #C80000;
     --scroll-track: #BFBFBF;
     --turquoise: #AECDC8;
     --default-font: 'Pattaya', sans-serif;
@@ -66,6 +72,7 @@ input, button {
     font-weight: 400;
     outline: none;
 }
+
 
 /* Main styles */
 
@@ -444,4 +451,153 @@ section.items {
         font-size: 18px;
     }
 
+}
+
+.modal-wrapper {
+    display: none;
+    padding: 0 100px;
+    background-color: var(--popUp-background);
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.modal-header {
+    background-color: var(--popUp-header-background);
+    margin-bottom: 30px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+    font-family: var(--text-font);
+}
+
+.modal-header-txt {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.modal-content-title, .modal-content-phone {
+    margin-bottom: 20px;
+}
+
+.modal-title-txt, .modal-title-block {
+    width: 100%;
+    height: 40px;
+    padding: 10px 25px;
+    font-size: 18px;
+    background-color: var(--dark-grey);
+}
+
+.modal-title-txt {
+    text-align: center;
+    font-family: var(--text-font);
+}
+
+
+.modal-content-title, .modal-content-phone {
+    display: flex;
+    justify-content: center;
+}
+
+.modal-input-block {
+    width: 100%;
+    height: 40px;
+    background-color: var(--white);
+}
+
+.modal-input-txt {
+    height: 40px;
+    border: none;
+    padding: 5px;
+    font-family: var(--text-font);
+    font-size: 24px;
+    border: 1px solid var(--white);
+}
+
+.modal-input-txt:focus {
+    border: 1px solid red;
+}
+
+.phone-code-options {
+    background-color: var(--dark-grey);
+    border: none;
+}
+
+.phone-code-options option {
+    font-family: var(--text-font);
+}
+
+.modal-content-remTxt {
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: var(--popUp-background-textArea);
+}
+
+.input-textArea {
+    width: 100%;
+    height: 100%;
+    background-color: var(--popUp-background-textArea);
+    resize: none;
+    border: none;
+    outline: none;
+}
+
+.modal-time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-time > input {
+    margin-left: 20px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-buttons button {
+    width: 100%;
+    height: 100%;
+}
+
+.modal-buttons button {
+    padding: 10px 5px;
+    font-family: var(--text-font);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.save-btn {
+    margin-right: 10px;
+    background-color: var(--save-btn-green);
+    border: 1px solid var(--save-btn-green);
+    color: var(--white);
+}
+
+.save-btn:hover {
+    background-color: var(--white);
+    border: 1px solid var(--save-btn-green);
+    color: var(--save-btn-green);
+}
+
+.cancel-btn {
+    background-color: var(--cancel-btn-red);
+    color: var(--white);
+    border: 1px solid var(--cancel-btn-red);
+}
+
+.cancel-btn:hover {
+    background-color: var(--white);
+    color: var(--cancel-btn-red);
+    border: 1px solid var(--cancel-btn-red);
 }
