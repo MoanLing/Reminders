@@ -114,25 +114,21 @@ input, button {
     text-align: center;
 }
 
-.header-login {
+.login-btn {
     color: var(--black);
     background-color: var(--login-btn);
     border: 1px solid var(--login-btn);
     border-radius: 10px 50px;
+    font-size: 14px;
     transition: color 0.5s ease-out 0.2s, background-color 0.5s ease-out 0.2s, border 0.5s ease-out 0s, border-radius 1.5s ease-out 0.2s;
     overflow: hidden;
 }
 
-.header-login a {
-    text-decoration: none;
+.login-btn-txt {
+    padding: 20px;
 }
 
-.login-btn-txt:visited {
-    color: var(--black);
-    text-decoration: none;
-}
-
-.header-login:hover {
+.login-btn:hover {
     color: var(--login-btn);
     background-color: var(--grey);
     border: 1px solid var(--black);
@@ -140,16 +136,19 @@ input, button {
     cursor: pointer;
 }
 
+.header-login a {
+    text-decoration: none;
+    display: block;
+}
 
-.login-btn-txt {
-    color: var(--black);
-    font-size: 20px;
-    padding: 15px;
+.login-btn-txt:visited {
+    text-decoration: none;
 }
 
 main {
     width: 100%;
     height: 100%;
+    position: relative;
     margin-top: 30px;
     display: flex;
     justify-content: center;
@@ -178,11 +177,26 @@ main {
 
 .add-new-btn {
     border: 1px solid var(--white);
+    padding: 5px;
+    overflow: hidden;
     color: var(--black);
     border-radius: 50px;
     background-color: var(--add-new-btn-background);
     transition: background-color 0.5s ease-out 0s, border 0.5s ease-out 0s, color 0.5s ease-out 0.2s;
 }
+
+/* Modal window style */
+
+#addNew-popup-btn {
+    display: none;
+}
+
+#addNew-popup-btn:checked ~ .modal-wrapper{
+    top: 10%;
+    left: 25%;
+}
+
+/* ------------------- */
 
 .add-new-btn:hover {
     background-color: var(--light-green);
@@ -211,6 +225,10 @@ section.items {
     padding: 30px;
     border-radius: 15px;
     font-family: var(--text-font);
+}
+
+.item:nth-child(3n) {
+    margin-right: 0;
 }
 
 .title-group {
@@ -301,12 +319,6 @@ section.items {
 }
 
 /* Media */
-
-@media (max-width: 1920px) {
-    .item:nth-child(3n) {
-        margin-right: 0;
-    }
-}
 
 @media (max-width: 1280px) {
     .header-block {
@@ -453,13 +465,21 @@ section.items {
 
 }
 
+/* Modal window style */
+
 .modal-wrapper {
-    display: none;
+    display: block;
+    position: absolute;
+    z-index: 999;
+    top: -999px;
+    left: 25%;
     padding: 0 100px;
     background-color: var(--popUp-background);
+    transition: all 1s ease-out;
 }
 
 .modal-content {
+    padding: 30px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -468,7 +488,6 @@ section.items {
 
 .modal-header {
     background-color: var(--popUp-header-background);
-    margin-bottom: 30px;
     padding: 10px;
     text-align: center;
     border-radius: 0 0 20px 20px;
@@ -542,10 +561,24 @@ section.items {
 .input-textArea {
     width: 100%;
     height: 100%;
+    line-height: 1.5;
     background-color: var(--popUp-background-textArea);
     resize: none;
     border: none;
     outline: none;
+    overflow-y: scroll;
+}
+
+.input-textArea::-webkit-scrollbar {
+    width: 5px;
+}
+
+.input-textArea::-webkit-scrollbar-track {
+    background-color: var(--black);
+}
+
+.input-textArea::-webkit-scrollbar-thumb {
+    background-color: var(--dark-grey);
 }
 
 .modal-time {
@@ -565,15 +598,13 @@ section.items {
     align-items: center;
 }
 
-.modal-buttons button {
+.modal-buttons button, .modal-buttons label {
     width: 100%;
     height: 100%;
-}
-
-.modal-buttons button {
     padding: 10px 5px;
     font-family: var(--text-font);
     font-size: 16px;
+    text-align: center;
     cursor: pointer;
 }
 
@@ -582,6 +613,7 @@ section.items {
     background-color: var(--save-btn-green);
     border: 1px solid var(--save-btn-green);
     color: var(--white);
+    transition: all 0.5s ease-out;
 }
 
 .save-btn:hover {
@@ -594,6 +626,7 @@ section.items {
     background-color: var(--cancel-btn-red);
     color: var(--white);
     border: 1px solid var(--cancel-btn-red);
+    transition: all 0.5s ease-out;
 }
 
 .cancel-btn:hover {
