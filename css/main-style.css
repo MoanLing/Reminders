@@ -535,10 +535,12 @@ section.items {
     font-family: var(--text-font);
     font-size: 24px;
     border: 1px solid var(--white);
+    transition: all 0.5s ease-out;
 }
 
 .modal-input-txt:focus {
     border: 1px solid red;
+    transition: all 0.5s ease-out;
 }
 
 .phone-code-options {
@@ -586,6 +588,15 @@ section.items {
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
+    background-color: var(--dark-grey);
+    padding: 20px;
+}
+
+.modal-time input {
+    font-size: 30px;
+    background-color: var(--dark-grey);
+    border: 2px double var(--black);
+    color: var(--dark-red-txt);
 }
 
 .modal-time > input {
@@ -605,7 +616,6 @@ section.items {
     font-family: var(--text-font);
     font-size: 16px;
     text-align: center;
-    cursor: pointer;
 }
 
 .save-btn {
@@ -627,10 +637,12 @@ section.items {
     color: var(--white);
     border: 1px solid var(--cancel-btn-red);
     transition: all 0.5s ease-out;
+    cursor: pointer;
 }
 
 .cancel-btn:hover {
     background-color: var(--white);
     color: var(--cancel-btn-red);
     border: 1px solid var(--cancel-btn-red);
+    cursor: pointer;
 }
