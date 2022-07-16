@@ -185,19 +185,6 @@ main {
     transition: background-color 0.5s ease-out 0s, border 0.5s ease-out 0s, color 0.5s ease-out 0.2s;
 }
 
-/* Modal window style */
-
-#addNew-popup-btn {
-    display: none;
-}
-
-#addNew-popup-btn:checked ~ .modal-wrapper{
-    top: 10%;
-    left: 25%;
-}
-
-/* ------------------- */
-
 .add-new-btn:hover {
     background-color: var(--light-green);
     border: 1px solid #000;
@@ -225,10 +212,6 @@ section.items {
     padding: 30px;
     border-radius: 15px;
     font-family: var(--text-font);
-}
-
-.item:nth-child(3n) {
-    margin-right: 0;
 }
 
 .title-group {
@@ -298,7 +281,7 @@ section.items {
 .item-content {
     margin-top: 20px;
     padding-right: 5px;
-    overflow-y: scroll;
+    overflow-y: auto;
     font-size: 14;
     font-family: var(--text-font);
     line-height: 1.6;
@@ -319,6 +302,12 @@ section.items {
 }
 
 /* Media */
+
+@media (max-width: 1920px) {
+    .item:nth-child(3n) {
+        margin-right: 0;
+    }
+}
 
 @media (max-width: 1280px) {
     .header-block {
@@ -343,6 +332,7 @@ section.items {
         height: 250px;
         padding: 20px;
     }
+
 
     .main-inner {
         padding: 0 20px;
@@ -467,15 +457,52 @@ section.items {
 
 /* Modal window style */
 
-.modal-wrapper {
-    display: block;
+
+.modal-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
     position: absolute;
-    z-index: 999;
-    top: -999px;
-    left: 25%;
+    z-index: 998;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: all .5s ease-out;
+}
+
+.modal-overlay-created {
+    
+}
+
+.modal-overlay-activated{
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-wrapper {
+    opacity: 0;
+    visibility: hidden;
+    position: relative;
+    top: -500px;
+    transform: rotate(-160deg);
+    border-radius: 10px;
     padding: 0 100px;
     background-color: var(--popUp-background);
-    transition: all 1s ease-out;
+    transition: all .5s ease-out;
+    
+}
+
+.modal-wrapper-created {
+    
+}
+
+.modal-wrapper-activated {
+    visibility: visible;
+    opacity: 1;
+    top: 0;
+    transform: rotate(0deg);
 }
 
 .modal-content {
@@ -576,7 +603,7 @@ section.items {
     resize: none;
     border: none;
     outline: none;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .input-textArea::-webkit-scrollbar {
@@ -638,6 +665,7 @@ section.items {
     background-color: var(--white);
     border: 1px solid var(--save-btn-green);
     color: var(--save-btn-green);
+    cursor: pointer;
 }
 
 .cancel-btn {
@@ -645,7 +673,6 @@ section.items {
     color: var(--white);
     border: 1px solid var(--cancel-btn-red);
     transition: all 0.5s ease-out;
-    cursor: pointer;
 }
 
 .cancel-btn:hover {

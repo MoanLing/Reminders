@@ -33,54 +33,9 @@
                         <div class="counts">
                             <span>6 / 6 reminders used</span>
                         </div>
-                        <input type="checkbox" id="addNew-popup-btn">
-                        <label class="add-new-btn" for="addNew-popup-btn">
+                        <button class="add-new-btn">
                             <span>+ Add new reminder</span>
-                        </label>
-
-                        <!-- Modal window -->
-                        <div class="modal-wrapper">
-                            <div class="modal-header">
-                                <h1 class="modal-header-txt">Create new reminder</h1>
-                            </div>
-                            <div class="modal-content">
-                                <div class="modal-content-title">
-                                    <div class="modal-title-txt modal-title-block">
-                                        <span>Title</span>
-                                    </div>
-                                    <div class="modal-title-input modal-input-block">
-                                        <input class="modal-input-txt" type="text">
-                                    </div>
-                                </div>
-                                <div class="modal-content-phone">
-                                    <div class="country-select modal-title-block">
-                                        <select class="phone-code-options">
-                                            <option value="Ukraine">+380</option>
-                                            <option value="Austria">+43</option>
-                                            <option value="Japan">+81</option>
-                                        </select>
-                                    </div>
-                                    <div class="phone-input modal-input-block">
-                                        <input class="modal-input-txt" type="phone">
-                                    </div>
-                                </div>
-                                <div class="modal-content-remTxt">
-                                    <textarea placeholder="Type reminder text here..." minlenght="3" maxlength="2000" class="input-textArea"></textarea>
-                                </div>
-                                <div class="modal-time">
-                                    <input type="date">
-                                    <input type="time">
-                                </div>
-                                <div class="modal-buttons">
-                                    <button class="save-btn">
-                                        <span>Save</span>
-                                    </button>
-                                    <label class="cancel-btn" for="addNew-popup-btn">
-                                        <span>Cancel</span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
+                        </button>
                     </section>
 
                     <!-- Items -->
@@ -389,6 +344,54 @@
 
                 </div>
             </main>
+
+            <!-- Modal window -->
+            <div class="modal-overlay">
+                <div class="modal-wrapper">
+                    <div class="modal-header">
+                        <h1 class="modal-header-txt">Create new reminder</h1>
+                    </div>
+                    <div class="modal-content">
+                        <div class="modal-content-title">
+                            <div class="modal-title-txt modal-title-block">
+                                <span>Title</span>
+                            </div>
+                            <div class="modal-title-input modal-input-block">
+                                <input class="modal-input-txt" tabindex="1" required type="text" minlength="1" maxlength="10">
+                            </div>
+                        </div>
+                        <div class="modal-content-phone">
+                            <div class="country-select modal-title-block">
+                                <select class="phone-code-options">
+                                    <option tabindex="2" value="Ukraine">+380</option>
+                                    <option tabindex="3" value="Austria">+43</option>
+                                    <option tabindex="4" value="Japan">+81</option>
+                                </select>
+                            </div>
+                            <div class="phone-input modal-input-block">
+                                <input class="modal-input-txt" tabindex="5" type="phone" minlenght="10" maxlenght="13">
+                            </div>
+                        </div>
+                        <div class="modal-content-remTxt">
+                            <textarea tabindex="6" placeholder="Type reminder text here..." minlenght="3" maxlength="2000" class="input-textArea"></textarea>
+                        </div>
+                        <div class="modal-time">
+                            <input tabindex="7" type="date">
+                            <input tabindex="8" type="time">
+                        </div>
+                        <div class="modal-buttons">
+                            <button class="save-btn">
+                                <span>Save</span>
+                            </button>
+                            <button class="cancel-btn">
+                                <span>Cancel</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
+        <script src="js/main.js"></script>
     </body>
 </html>
