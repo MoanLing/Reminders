@@ -30,6 +30,7 @@ window.onclick = function (e) {
     }
 }
 
+
 openModalBtn.addEventListener("click", function(){
     openModal()
 });

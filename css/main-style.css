@@ -301,9 +301,241 @@ section.items {
     border-radius: 30px;
 }
 
+
+/* Modal window style */
+
+
+.modal-overlay {
+    padding: 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    z-index: 998;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: all .5s ease-out;
+}
+
+.modal-overlay-created {
+    
+}
+
+.modal-overlay-activated{
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-wrapper {
+    opacity: 0;
+    visibility: hidden;
+    position: relative;
+    top: -500px;
+    transform: rotate(-160deg);
+    border-radius: 10px;
+    padding: 0 100px;
+    background-color: var(--popUp-background);
+    transition: all .5s ease-out;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.modal-wrapper-created {
+    
+}
+
+.modal-wrapper-activated {
+    visibility: visible;
+    opacity: 1;
+    top: 0;
+    transform: rotate(0deg);
+}
+
+.modal-content {
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.modal-header {
+    background-color: var(--popUp-header-background);
+    padding: 10px;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+    font-family: var(--text-font);
+}
+
+.modal-header-txt {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.modal-content-title, .modal-content-phone {
+    margin-bottom: 20px;
+}
+
+.modal-title-txt, .modal-title-block {
+    width: 30%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    background-color: var(--dark-grey);
+}
+
+.modal-title-txt {
+    text-align: center;
+    font-family: var(--text-font);
+}
+
+
+.modal-content-title, .modal-content-phone {
+    display: flex;
+    justify-content: center;
+}
+
+.modal-input-block {
+    width: 70%;
+    height: 40px;
+    background-color: var(--white);
+}
+
+.modal-input-txt {
+    width: 100%;
+    height: 40px;
+    border: none;
+    padding: 5px;
+    font-family: var(--text-font);
+    font-size: 24px;
+    border: 1px solid var(--white);
+    transition: all 0.5s ease-out;
+}
+
+.modal-input-txt:focus {
+    border: 1px solid red;
+    transition: all 0.5s ease-out;
+}
+
+.phone-code-options {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 18px;
+    background-color: var(--dark-grey);
+    border: none;
+    outline: none;
+}
+
+.phone-code-options option {
+    font-size: 18px;
+    font-family: var(--text-font);
+}
+
+.modal-content-remTxt {
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: var(--popUp-background-textArea);
+}
+
+.input-textArea {
+    width: 100%;
+    height: 100%;
+    line-height: 1.5;
+    font-size: 16px;
+    background-color: var(--popUp-background-textArea);
+    resize: none;
+    border: none;
+    outline: none;
+    overflow-y: auto;
+}
+
+.input-textArea::-webkit-scrollbar {
+    width: 5px;
+}
+
+.input-textArea::-webkit-scrollbar-track {
+    background-color: var(--black);
+}
+
+.input-textArea::-webkit-scrollbar-thumb {
+    background-color: var(--dark-grey);
+}
+
+.modal-time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: var(--dark-grey);
+    padding: 20px;
+}
+
+.modal-time input {
+    font-size: 30px;
+    background-color: var(--dark-grey);
+    color: var(--dark-red-txt);
+    border: none;
+}
+
+.modal-time > input {
+    margin-left: 20px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-buttons button, .modal-buttons label {
+    width: 100%;
+    height: 100%;
+    padding: 10px 5px;
+    font-family: var(--text-font);
+    font-size: 16px;
+    text-align: center;
+}
+
+.save-btn {
+    margin-right: 10px;
+    background-color: var(--save-btn-green);
+    border: 1px solid var(--save-btn-green);
+    color: var(--white);
+    transition: all 0.5s ease-out;
+}
+
+.save-btn:hover {
+    background-color: var(--white);
+    border: 1px solid var(--save-btn-green);
+    color: var(--save-btn-green);
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background-color: var(--cancel-btn-red);
+    color: var(--white);
+    border: 1px solid var(--cancel-btn-red);
+    transition: all 0.5s ease-out;
+}
+
+.cancel-btn:hover {
+    background-color: var(--white);
+    color: var(--cancel-btn-red);
+    border: 1px solid var(--cancel-btn-red);
+    cursor: pointer;
+}
+
 /* Media */
 
-@media (max-width: 1920px) {
+@media (max-width: 1920px) or (min-width: 1920px) and (min-width: 1280px) and (min-width: 799px) {
     .item:nth-child(3n) {
         margin-right: 0;
     }
@@ -409,6 +641,29 @@ section.items {
     .title-txt {
         font-size: 20px;
     }
+
+    .modal-wrapper {
+        width: 400px;
+        padding: 0 25px;
+    }
+
+    .modal-title-block {
+        height: 30px;
+    }
+
+    .modal-input-block {
+        height: 30px;
+        font-size: 16px;
+    }
+
+    .modal-input-txt {
+        height: 30px;
+        font-size: 16px;
+    }
+
+    .modal-time {
+        padding: 10px;
+    }
 }
 
 
@@ -453,231 +708,4 @@ section.items {
         font-size: 18px;
     }
 
-}
-
-/* Modal window style */
-
-
-.modal-overlay {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
-    z-index: 998;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.8);
-    transition: all .5s ease-out;
-}
-
-.modal-overlay-created {
-    
-}
-
-.modal-overlay-activated{
-    visibility: visible;
-    opacity: 1;
-}
-
-.modal-wrapper {
-    opacity: 0;
-    visibility: hidden;
-    position: relative;
-    top: -500px;
-    transform: rotate(-160deg);
-    border-radius: 10px;
-    padding: 0 100px;
-    background-color: var(--popUp-background);
-    transition: all .5s ease-out;
-    
-}
-
-.modal-wrapper-created {
-    
-}
-
-.modal-wrapper-activated {
-    visibility: visible;
-    opacity: 1;
-    top: 0;
-    transform: rotate(0deg);
-}
-
-.modal-content {
-    padding: 30px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-
-.modal-header {
-    background-color: var(--popUp-header-background);
-    padding: 10px;
-    text-align: center;
-    border-radius: 0 0 20px 20px;
-    font-family: var(--text-font);
-}
-
-.modal-header-txt {
-    font-size: 20px;
-    font-weight: 500;
-}
-
-.modal-content-title, .modal-content-phone {
-    margin-bottom: 20px;
-}
-
-.modal-title-txt, .modal-title-block {
-    width: 100%;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    background-color: var(--dark-grey);
-}
-
-.modal-title-txt {
-    text-align: center;
-    font-family: var(--text-font);
-}
-
-
-.modal-content-title, .modal-content-phone {
-    display: flex;
-    justify-content: center;
-}
-
-.modal-input-block {
-    width: 100%;
-    height: 40px;
-    background-color: var(--white);
-}
-
-.modal-input-txt {
-    height: 40px;
-    border: none;
-    padding: 5px;
-    font-family: var(--text-font);
-    font-size: 24px;
-    border: 1px solid var(--white);
-    transition: all 0.5s ease-out;
-}
-
-.modal-input-txt:focus {
-    border: 1px solid red;
-    transition: all 0.5s ease-out;
-}
-
-.phone-code-options {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    font-size: 18px;
-    background-color: var(--dark-grey);
-    border: none;
-    outline: none;
-}
-
-.phone-code-options option {
-    font-size: 18px;
-    font-family: var(--text-font);
-}
-
-.modal-content-remTxt {
-    width: 100%;
-    height: 200px;
-    padding: 10px;
-    margin-bottom: 20px;
-    background-color: var(--popUp-background-textArea);
-}
-
-.input-textArea {
-    width: 100%;
-    height: 100%;
-    line-height: 1.5;
-    background-color: var(--popUp-background-textArea);
-    resize: none;
-    border: none;
-    outline: none;
-    overflow-y: auto;
-}
-
-.input-textArea::-webkit-scrollbar {
-    width: 5px;
-}
-
-.input-textArea::-webkit-scrollbar-track {
-    background-color: var(--black);
-}
-
-.input-textArea::-webkit-scrollbar-thumb {
-    background-color: var(--dark-grey);
-}
-
-.modal-time {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-    background-color: var(--dark-grey);
-    padding: 20px;
-}
-
-.modal-time input {
-    font-size: 30px;
-    background-color: var(--dark-grey);
-    color: var(--dark-red-txt);
-    border: none;
-}
-
-.modal-time > input {
-    margin-left: 20px;
-}
-
-.modal-buttons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.modal-buttons button, .modal-buttons label {
-    width: 100%;
-    height: 100%;
-    padding: 10px 5px;
-    font-family: var(--text-font);
-    font-size: 16px;
-    text-align: center;
-}
-
-.save-btn {
-    margin-right: 10px;
-    background-color: var(--save-btn-green);
-    border: 1px solid var(--save-btn-green);
-    color: var(--white);
-    transition: all 0.5s ease-out;
-}
-
-.save-btn:hover {
-    background-color: var(--white);
-    border: 1px solid var(--save-btn-green);
-    color: var(--save-btn-green);
-    cursor: pointer;
-}
-
-.cancel-btn {
-    background-color: var(--cancel-btn-red);
-    color: var(--white);
-    border: 1px solid var(--cancel-btn-red);
-    transition: all 0.5s ease-out;
-}
-
-.cancel-btn:hover {
-    background-color: var(--white);
-    color: var(--cancel-btn-red);
-    border: 1px solid var(--cancel-btn-red);
-    cursor: pointer;
 }
