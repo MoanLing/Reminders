@@ -5,16 +5,13 @@ const body = document.body,
     mainModal = document.querySelector('.modal-wrapper'),
     openModalBtn = document.querySelector('.add-new-btn'),
     mainDocument = document.documentElement,
-    widthWithScroll = mainDocument.clientWidth,
-    widthWithoutScroll = body.offsetWidth,
     closeModalBtn = document.querySelector('.cancel-btn');
-console.log(widthWithScroll);
-console.log(widthWithoutScroll);
 
 function openModal() {
     body.classList.add('clear-body-scroll');
-    body.style.marginRight = 
-    `${widthCalced}px`;
+    body.style.paddingRight = 
+    `${calcedWitdh}px`;
+    body.style.overflow = 'hidden';
 
     bgModal.classList.add('modal-overlay-created');
     mainModal.classList.add('modal-wrapper-created');
@@ -31,7 +28,8 @@ function openModal() {
 
 function closeModal() {
     body.classList.remove('clear-body-scroll');
-    body.style.marginRight = "";
+    body.style.paddingRight = "";
+    body.style.overflow = '';
 
     bgModal.classList.remove('modal-overlay-activated');
     mainModal.classList.remove('modal-wrapper-activated');
@@ -56,7 +54,31 @@ closeModalBtn.addEventListener("click", function(){
 
 
 // Scroll calc JS
+// function fignya() {
 
-const widthCalced = widthWithScroll - widthWithoutScroll;
-console.log(`${widthCalced}px`);
-console.log(widthWithoutScroll - widthWithScroll); 
+//     const item = document.createElement('scroll-block');
+
+//     item.style.position = 'absolute';
+//     item.style.overflow = 'scroll';
+//     item.style.visibility = 'hidden';
+//     item.style.top = '-9999px';
+//     item.style.width = '50px';
+//     item.style.height = '50px';
+
+//     document.body.appendChild(item);
+
+
+//     const widthCalced = item.offsetWidth - item.clientWidth;
+
+//     document.body.removeChild(item);
+//     return widthCalced;
+// }
+
+
+// console.log(fignya);
+const item = document.querySelector('.scroll-block');
+
+const calcedWitdh = item.offsetWidth - item.clientWidth;
+console.log(item.offsetWidth);
+console.log(item.clientWidth);
+console.log(calcedWitdh);
