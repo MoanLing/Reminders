@@ -45,6 +45,10 @@ body {
     background-color: var(--default-background-main);
 }
 
+.clear-body-scroll {
+    overflow: hidden;
+}
+
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
@@ -281,6 +285,7 @@ section.items {
 .item-content {
     margin-top: 20px;
     padding-right: 5px;
+    overflow-x: hidden;
     overflow-y: auto;
     font-size: 14;
     font-family: var(--text-font);
@@ -307,7 +312,7 @@ section.items {
 
 .modal-overlay {
     padding: 0 15px;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     opacity: 0;
@@ -321,7 +326,7 @@ section.items {
 }
 
 .modal-overlay-created {
-    
+    display: flex;
 }
 
 .modal-overlay-activated{
@@ -330,6 +335,7 @@ section.items {
 }
 
 .modal-wrapper {
+    display: none;
     opacity: 0;
     visibility: hidden;
     position: relative;
@@ -344,7 +350,7 @@ section.items {
 }
 
 .modal-wrapper-created {
-    
+    display: block;
 }
 
 .modal-wrapper-activated {
@@ -535,7 +541,7 @@ section.items {
 
 /* Media */
 
-@media (max-width: 1920px) or (min-width: 1920px) and (min-width: 1280px) and (min-width: 799px) {
+@media (max-width: 1920px) and (min-width: 600px){
     .item:nth-child(3n) {
         margin-right: 0;
     }
