@@ -715,10 +715,3 @@ section.items {
     }
 
 }
-
-.scroll-block {
-    width: 50px;
-    height: 50px;
-    overflow-y: scroll;
-    visibility: hidden;
-}

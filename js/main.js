@@ -10,7 +10,7 @@ const body = document.body,
 function openModal() {
     body.classList.add('clear-body-scroll');
     body.style.paddingRight = 
-    `${calcedWitdh}px`;
+    `${getScrollWidth()}px`;
     body.style.overflow = 'hidden';
 
     bgModal.classList.add('modal-overlay-created');
@@ -28,8 +28,14 @@ function openModal() {
 
 function closeModal() {
     body.classList.remove('clear-body-scroll');
-    body.style.paddingRight = "";
-    body.style.overflow = '';
+
+    
+
+    setTimeout(() => {
+        body.style.paddingRight = "";
+        body.style.overflow = ''
+    }, 500);
+    
 
     bgModal.classList.remove('modal-overlay-activated');
     mainModal.classList.remove('modal-wrapper-activated');
@@ -54,31 +60,19 @@ closeModalBtn.addEventListener("click", function(){
 
 
 // Scroll calc JS
-// function fignya() {
+const getScrollWidth = () => {
+const item = document.createElement('scroll-block');
 
-//     const item = document.createElement('scroll-block');
-
-//     item.style.position = 'absolute';
-//     item.style.overflow = 'scroll';
-//     item.style.visibility = 'hidden';
-//     item.style.top = '-9999px';
-//     item.style.width = '50px';
-//     item.style.height = '50px';
-
-//     document.body.appendChild(item);
-
-
-//     const widthCalced = item.offsetWidth - item.clientWidth;
-
-//     document.body.removeChild(item);
-//     return widthCalced;
-// }
-
-
-// console.log(fignya);
-const item = document.querySelector('.scroll-block');
-
+body.appendChild(item);
+    item.style.position = 'absolute';
+    item.style.top = '-9999px';
+    item.style.width = '50px';
+    item.style.height = '50px';
+    item.style.overflow = 'scroll';
+    item.style.visibility = 'hidden';
 const calcedWitdh = item.offsetWidth - item.clientWidth;
-console.log(item.offsetWidth);
-console.log(item.clientWidth);
-console.log(calcedWitdh);
+body.removeChild(item);
+return calcedWitdh;
+}
+
+console.log(getScrollWidth());
