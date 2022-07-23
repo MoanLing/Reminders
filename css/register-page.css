@@ -187,22 +187,20 @@ main {
     text-align: center;
 }
 
-.mail-block {
+.new-mail-block, .new-name-block, .new-password-block{
     margin-bottom: 20px;
     transition: .3s all ease-out;
 }
 
-.mail-block:focus {
-    box-shadow: 0 0 15px 2px green;
+.new-mail-block:focus, .new-name-block:focus, .new-password-block:focus, .new-password-block-repeat:focus {
+    
+box-shadow: 0 0 15px 2px red;
+
 }
 
-.password-block {
+.new-password-block-repeat {
     margin-bottom: 30px;
     transition: .3s all ease-out;
-}
-
-.password-block:focus {
-    box-shadow: 0 0 15px 2px green;
 }
 
 .log-btn {
