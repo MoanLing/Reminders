@@ -74,5 +74,3 @@ const calcedWitdh = item.offsetWidth - item.clientWidth;
 body.removeChild(item);
 return calcedWitdh;
 }
-
-console.log(getScrollWidth());
