@@ -310,7 +310,7 @@ section.items {
 /* Modal window style */
 
 .modal-overlay {
-    padding: 0 15px;
+    padding: 15px;
     display: none;
     justify-content: center;
     align-items: center;

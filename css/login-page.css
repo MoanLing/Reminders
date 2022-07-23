@@ -1,0 +1,215 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Anek+Latin:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+
+/* Variables */
+
+:root {
+    --default-background-main: #E6DCF5;
+    --login-btn: #D0D0D0;
+    --dark-green: #A1BC97;
+    --light-green: #AFBE8F;
+    --popUp-background: #F1F5B8;
+    --popUp-header-background: #CBD781;
+    --popUp-background-textArea: #E3E3E3;
+    --middle-red: #6D0000;
+    --dark-red-txt: #4F1E1E;
+    --add-new-btn-background: #D4C8C8;
+    --grey: #6D6D6D;
+    --dark-grey: #AAA;
+    --black: #000000;
+    --white: #FFFFFF;
+    --beige: #ECEBD6;
+    --yellow: #F9E74D;
+    --save-btn-green: #54B244;
+    --cancel-btn-red: #C80000;
+    --login-btn: #587A68;
+    --reg-btn: #B84D4D;
+    --scroll-track: #BFBFBF;
+    --turquoise: #AECDC8;
+    --default-font: 'Pattaya', sans-serif;
+    --text-font: 'Anek Latin', sans-serif;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+/* Normalize styles */
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: var(--default-font);
+}
+
+.clear-body-scroll {
+    overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+ul, ol, li {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    list-style: none;
+}
+
+p {
+    margin: 0;
+    line-height: 1.5;
+    font-family: var(--default-font);
+}
+
+input, button {
+    font-family: var(--default-font);
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+}
+
+
+/* Main styles */
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    width: 100%;
+    background-color: var(--dark-green);
+}
+
+.header-title {
+    background-color: var(--beige);
+    padding: 10px 100px;
+    border-radius: 50px 10px;
+}
+
+.header-title h1 {
+    font-size: 24px;
+    color: var(--dark-red-txt);
+    text-align: center;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/Sticky-Notes-Wallpaper.jpg) 50%/100% 100% no-repeat;
+}
+
+.main-inner {
+    width: 1200px;
+    height: 100%;
+    display: flex;
+    margin: 100px 0;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-inner-header {
+    width: 30%;
+    margin-bottom: 100px;
+    border-radius: 10px 50px;
+    background-color: var(--beige);
+    padding: 15px;
+}
+
+.main-inner-header h1 {
+    font-size: 32px;
+    text-align: center;
+}
+
+.form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form input {
+    width: 100%;
+    padding: 15px;
+}
+
+.form input {
+    border: none;
+    font-family: var(--text-font);
+}
+
+.form button {
+    font-size: 24px;
+    width: 100%;
+    padding: 10px;
+}
+
+.form a{
+    font-size: 24px;
+    width: 100%;
+    padding: 10px;
+    display: block;
+    text-align: center;
+}
+
+.login-block {
+    margin-bottom: 20px;
+}
+
+.password-block {
+    margin-bottom: 30px;
+}
+
+.log-btn {
+    margin-bottom: 10px;
+    border: 1px solid var(--login-btn);
+    background-color: var(--login-btn);
+    color: var(--white);
+    transition: all 0.5s ease-out;
+}
+
+.log-btn:hover {
+    border: 1px solid var(--login-btn);
+    background-color: var(--white);
+    color: var(--login-btn);
+    cursor: pointer;
+}
+
+.reg-btn {
+    text-decoration: none;
+    border: 1px solid var(--reg-btn);
+    background-color: var(--reg-btn);
+    color: var(--white);
+    transition: all 0.5s ease-out;
+}
+
+.reg-btn:visited {
+    color: var(--white);
+}
+
+.reg-btn:hover {
+    border: 1px solid var(--reg-btn);
+    background-color: var(--white);
+    color: var(--reg-btn);
+    cursor: pointer;
+}
